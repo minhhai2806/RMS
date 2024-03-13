@@ -57,28 +57,8 @@ class reportClass:
             cursor="hand2",
             command=self.search,
         ).place(x=680, y=100, width=100, height=35)
-        # btn_clear=Button(self.root,text="Xoá",font=("goudy old style",15,"bold"),bg="gray",fg="white",cursor="hand2").place(x=800,y=100,width=100,height=35)
+        
 
-        # result labels
-        # lbl_roll=Label(self.root,text="MSV",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=150,y=230,width=150,height=50)
-        # lbl_name=Label(self.root,text="Họ tên",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=300,y=230,width=150,height=50)
-        # lbl_course=Label(self.root,text="Môn học",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=450,y=230,width=150,height=50)
-        # lbl_marks=Label(self.root,text="Điểm hệ 10",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=600,y=230,width=150,height=50)
-        # lbl_full=Label(self.root,text="Điểm chũ",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=750,y=230,width=150,height=50)
-        # lbl_per=Label(self.root,text="Điểm hệ 4",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=900,y=230,width=150,height=50)
-
-        # self.roll=Label(self.root,font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE)
-        # self.roll.place(x=150,y=280,width=150,height=50)
-        # self.name=Label(self.root,font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE)
-        # self.name.place(x=300,y=280,width=150,height=50)
-        # self.course=Label(self.root,font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE)
-        # self.course.place(x=450,y=280,width=150,height=50)
-        # self.marks=Label(self.root,font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE)
-        # self.marks.place(x=600,y=280,width=150,height=50)
-        # self.full=Label(self.root,font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE)
-        # self.full.place(x=750,y=280,width=150,height=50)
-        # self.per=Label(self.root,font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE)
-        # self.per.place(x=900,y=280,width=150,height=50)
         self.C_Frame = Frame(self.root, bd=2, relief=RIDGE)
         self.C_Frame.place(x=400, y=200, width=600, height=340)
         scrolly = Scrollbar(self.C_Frame, orient=VERTICAL)
@@ -103,12 +83,12 @@ class reportClass:
         self.CourseTable.heading("per", text="Điểm hệ 4")
         self.CourseTable["show"] = "headings"
         self.CourseTable.column("rid", width=40)
-        self.CourseTable.column("roll", width=40)
-        self.CourseTable.column("name", width=80)
-        self.CourseTable.column("course", width=100)
-        self.CourseTable.column("marks_ob", width=100)
-        self.CourseTable.column("full_marks", width=100)
-        self.CourseTable.column("per", width=100)
+        self.CourseTable.column("roll", width=80)
+        self.CourseTable.column("name", width=140)
+        self.CourseTable.column("course", width=80)
+        self.CourseTable.column("marks_ob", width=80)
+        self.CourseTable.column("full_marks", width=80)
+        self.CourseTable.column("per", width=80)
         self.CourseTable.pack(fill=BOTH, expand=1)
         self.CourseTable.bind("<ButtonRelease-1>", self.get_data)
         self.show()

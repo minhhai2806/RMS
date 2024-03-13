@@ -199,7 +199,7 @@ class CourseClass:
         try:
             if self.var_course.get() == "":
                 messagebox.showerror(
-                    "Error", "Chưa chọn môn học", parent=self.root
+                    "Error", "Course name should be required", parent=self.root
                 )
             else:
                 cur.execute(
@@ -209,12 +209,12 @@ class CourseClass:
                 if row == None:
                     messagebox.showerror(
                         "Error",
-                        "Chọn môn học trong danh sách",
+                        "Please select course from the list first",
                         parent=self.root,
                     )
                 else:
                     op = messagebox.askyesno(
-                        "Xác nhận", "Bạn muốn xoá?", parent=self.root
+                        "Confirm", "Do you want to delete?", parent=self.root
                     )
                     if op == True:
                         cur.execute(
@@ -222,7 +222,7 @@ class CourseClass:
                         )
                         con.commit()
                         messagebox.showinfo(
-                            "Xoá", "Xoá thành công", parent=self.root
+                            "Delete", "Course delete successfully", parent=self.root
                         )
                         self.clear()
         except Exception as ex:
@@ -248,7 +248,7 @@ class CourseClass:
         try:
             if self.var_course.get() == "":
                 messagebox.showerror(
-                    "Error", "Chưa điền tên môn học", parent=self.root
+                    "Error", "Course name should be required", parent=self.root
                 )
             else:
                 cur.execute(
@@ -257,7 +257,7 @@ class CourseClass:
                 row = cur.fetchone()
                 if row != None:
                     messagebox.showerror(
-                        "Error", "Tên môn học đã tồn tại", parent=self.root
+                        "Error", "Course name already present", parent=self.root
                     )
                 else:
                     cur.execute(
@@ -271,7 +271,7 @@ class CourseClass:
                     )
                     con.commit()
                     messagebox.showinfo(
-                        "Success", "Môn học cập nhật thành công", parent=self.root
+                        "Success", "Course Update Successfully", parent=self.root
                     )
                     self.show()
         except Exception as ex:
@@ -285,7 +285,7 @@ class CourseClass:
         try:
             if self.var_course.get() == "":
                 messagebox.showerror(
-                    "Error", "Chưa điền tên môn học", parent=self.root
+                    "Error", "Course name should be required", parent=self.root
                 )
             else:
                 cur.execute(
@@ -294,7 +294,7 @@ class CourseClass:
                 row = cur.fetchone()
                 if row == None:
                     messagebox.showerror(
-                        "Error", "Chọn môn học trong danh sách", parent=self.root
+                        "Error", "Select Course from list", parent=self.root
                     )
                 else:
                     cur.execute(
@@ -308,7 +308,7 @@ class CourseClass:
                     )
                     con.commit()
                     messagebox.showinfo(
-                        "Success", "Môn học cập nhật thành công", parent=self.root
+                        "Success", "Course Added Successfully", parent=self.root
                     )
                     self.show()
         except Exception as ex:
