@@ -194,7 +194,7 @@ class reportClass:
                 )  # Due to tupple we added , at last
                 row = cur.fetchone()
                 op = messagebox.askyesno(
-                    "Confirm", "Do you want to delete?", parent=self.root
+                    "Confirm", "Bạn muốn xoá?", parent=self.root
                 )
                 if op == True:
                     cur.execute(
@@ -203,7 +203,7 @@ class reportClass:
                     )
                     con.commit()
                     messagebox.showinfo(
-                        "Delete", "Course delete successfully", parent=self.root
+                        "Delete", "Xoá thành công", parent=self.root
                     )
                     self.clear()
         except Exception as ex:

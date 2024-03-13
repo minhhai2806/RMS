@@ -167,7 +167,7 @@ class resultClass:
                 self.var_name.set(row[0])
                 # self.var_course.set(row[1])
             else:
-                messagebox.showerror("Error", "No record found", parent=self.root)
+                messagebox.showerror("Error", "Không tồn tại", parent=self.root)
         except Exception as ex:
             messagebox.showerror("Error", f"Error due to {str(ex)}")
 
